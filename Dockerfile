@@ -1,4 +1,5 @@
-FROM ros:indigo
+#FROM ros:indigo
+FROM ros:indigo-ros-core
 
 RUN apt-get update && \
     apt-get install -y \
