@@ -1,6 +1,9 @@
 #FROM ros:indigo
 FROM ros:indigo-ros-core
 
+# IGN PROXY
+RUN echo 'Acquire::http::Proxy "http://proxy.ign.fr:3128";' >> /etc/apt/apt.conf
+
 RUN apt-get update && \
     apt-get install -y \
     ros-indigo-rosserial-arduino ros-indigo-rosserial
